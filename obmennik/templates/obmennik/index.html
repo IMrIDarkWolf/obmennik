@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,900" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/template/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/template/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/template/css/price-range.css" rel="stylesheet">
+    <link href="/template/css/animate.css" rel="stylesheet">
+    <link href='{% static "css/style.css" %}' rel="stylesheet">
+    <link href="/template/css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <div class="wrapper">
+            <div class="logo"><img src="./template/images/logo2017.png" alt=""></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Правила обмена</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="./views/site/fadeback.php">Обратная связь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="payment">
+        <div class="wrapper">
+            <form class="main" method="POST">
+                {% csrf_token %}
+                <div class="give">
+                      <input type="text" placeholder="Отдаёте" name="" id="give" value="1">
+                      <ul class="give_pay">
+                          <li class="tool" data-tool="Bitcoin" name_valut="BTC" tabindex="1"><a href="#"><img src="{% static 'img/crypto/bitcoin.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Bitshares" name_valut="BTS" tabindex="1"><a href="#"><img class="test" src="{% static 'img/crypto/bitshares.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Bytecoin" name_valut="Bytecoin" tabindex="1"><a href="#"><img src="./template/images/32/bytecoin.png" alt=""></a></li>-->
+                          <li class="tool hover" data-tool="Dash"   name_valut="DASH" tabindex="1"><a href="#" ><img src="{% static 'img/crypto//dash.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Decred" name_valut="DCR" tabindex="1"><a href="#"><img src="{% static 'img/crypto//decred.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Digibyte" name_valut="DGB" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/digibyte.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Dogecoin" name_valut="DOGE" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/dogecoin.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Eth-classic" name_valut="ETC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/eth-classic.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Ether" name_valut="ETH" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/ether.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Gamecredits" name_valut="GAME" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/gamecredits.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Gnosis" name_valut="GNO" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/gnosis.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Golem" name_valut="GNT" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/golem.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Komodo" name_valut="KMD" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/komodo.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Litecoin" name_valut="LTC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/litecoin.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Monero" name_valut="XMR" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/monero.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Nem" name_valut="NEM" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/nem.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Nxt" name_valut="NXT" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/nxt.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Peercoin" name_valut="PPC"  tabindex="1"><a href="#" ><img src="{% static 'img/crypto/peercoin.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Potcoin" name_valut="POT" tabindex="1"><a href="#"><img src="./template/images/32/potcoin.png" alt=""></a></li>-->
+                          <li class="tool" data-tool="Ripple" name_valut="XRP" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/ripple.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Sia" name_valut="SC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/sia.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Steem" name_valut="STEEM" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/steem.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Stellar" name_valut="Stellar" tabindex="1"><a href="#" ><img src="./template/images/32/stellar.png" alt=""></a></li>-->
+                          <li class="tool" data-tool="Stratis" name_valut="STRAT" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/stratis.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Tether" name_valut="Tether" tabindex="1"><a href="#" ><img src="./template/images/32/tether.png" alt=""></a></li>-->
+                          <li class="tool" data-tool="Vertcoin" name_valut="VTC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/vertcoin.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Waves" name_valut="WAVES" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/waves.png' %}" alt=""></a></li>
+                          <li class="tool" data-tool="Zcash" name_valut="ZEC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/zcash.png' %}" alt=""></a></li>
+                      </ul>
+                </div>
+
+                <div class="receive">
+                    <input type="text" placeholder="Получите" id="receive" readonly><div class="load"></div>
+                    <ul class="receive-pay">
+                          <li class="tools hover" data-tool="Bitcoin" name_valut="BTC" tabindex="1"><a href="#"><img src="{% static 'img/crypto/bitcoin.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Bitshares" name_valut="BTS" tabindex="1"><a href="#"><img class="test" src="{% static 'img/crypto/bitshares.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Bytecoin" name_valut="Bytecoin" tabindex="1"><a href="#"><img src="./template/images/32/bytecoin.png" alt=""></a></li>-->
+                          <li class="tools" data-tool="Dash"   name_valut="DASH" tabindex="1"><a href="#" ><img src="{% static 'img/crypto//dash.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Decred" name_valut="DCR" tabindex="1"><a href="#"><img src="{% static 'img/crypto//decred.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Digibyte" name_valut="DGB" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/digibyte.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Dogecoin" name_valut="DOGE" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/dogecoin.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Eth-classic" name_valut="ETC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/eth-classic.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Ether" name_valut="ETH" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/ether.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Gamecredits" name_valut="GAME" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/gamecredits.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Gnosis" name_valut="GNO" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/gnosis.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Golem" name_valut="GNT" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/golem.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Komodo" name_valut="KMD" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/komodo.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Litecoin" name_valut="LTC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/litecoin.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Monero" name_valut="XMR" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/monero.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Nem" name_valut="NEM" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/nem.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Nxt" name_valut="NXT" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/nxt.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Peercoin" name_valut="PPC"  tabindex="1"><a href="#" ><img src="{% static 'img/crypto/peercoin.png' %}" alt=""></a></li>
+<!--                          <li class="tools" data-tool="Potcoin" name_valut="POT" tabindex="1"><a href="#"><img src="./template/images/32/potcoin.png" alt=""></a></li>-->
+                          <li class="tools" data-tool="Ripple" name_valut="XRP" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/ripple.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Sia" name_valut="SC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/sia.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Steem" name_valut="STEEM" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/steem.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Stellar" name_valut="Stellar" tabindex="1"><a href="#" ><img src="./template/images/32/stellar.png" alt=""></a></li>-->
+                          <li class="tools" data-tool="Stratis" name_valut="STRAT" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/stratis.png' %}" alt=""></a></li>
+<!--                          <li class="tool" data-tool="Tether" name_valut="Tether" tabindex="1"><a href="#" ><img src="./template/images/32/tether.png" alt=""></a></li>-->
+                          <li class="tools" data-tool="Vertcoin" name_valut="VTC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/vertcoin.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Waves" name_valut="WAVES" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/waves.png' %}" alt=""></a></li>
+                          <li class="tools" data-tool="Zcash" name_valut="ZEC" tabindex="1"><a href="#" ><img src="{% static 'img/crypto/zcash.png' %}" alt=""></a></li>
+                      </ul>
+                         <button id="get">Отправить</button>
+                </div>
+
+            </form>
+
+                <div class="review">
+                    <div class="main-title">
+                        <h2>3. Отзывы</h2> </div>
+                        {% for review in reviews %}
+                        <div class="text_review">
+                            <div class="item_review">
+                                <b>{{review.email}}</b>
+                                <p>{{review.text}}</p>
+                                <div class="date">{{review.date}}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <form action="#" method="post" class="form_review" onsubmit="return false;"> <span>Ваша почта</span>
+                        <input type="text" id="mail" placeholder="test@text.ru">
+                        <br> <span>Текст сообщения</span>
+                        <textarea name="review" id="revi" placeholder="Топовый сайт"></textarea>
+                        <br>
+                        <input type="submit" name="submit" id="submit"> </form>
+                </div>
+                <div class="cler"></div>
+            </div>
+            <div id="tes"></div>
+
+
+        </div>
+    </section>
+    <div id="message_error"></div>
+    <div id="message_accept"></div>
+    <!--<a href="/libs/pay.html" class="pay-item">отдаете</a>-->
+    <!--<a href="/libs/cashback.html" class="cashback">получаете</a>-->
+<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<!--    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>-->
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>
+
+
+
+
